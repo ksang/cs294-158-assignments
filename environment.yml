@@ -9,4 +9,5 @@ dependencies:
   - jupyter
   - jupyterthemes
   - requests
-  
+  - scikit-learn
+  - tqdm
