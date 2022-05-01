@@ -99,7 +99,10 @@ def load_pickled_data(fname, include_labels=False):
 
 
 def get_data_dir(hw_number):
-    return join('deepul', 'homeworks', f'hw{hw_number}', 'data')
+    data_dir = join('deepul', 'homeworks', f'hw{hw_number}', 'data')
+    if os.path.exists(data_dir):
+        return data_dir
+    return os.path.join(os.getcwd(), 'data')
 
 
 def quantize(images, n_bits):
